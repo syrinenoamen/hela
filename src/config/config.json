@@ -4,9 +4,9 @@
     "base_url": "https://syrinenoamen.github.io/hela",
     "base_path": "/hela",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_darkmode": "/images/logo-darkmode.png",
+    "favicon": "/hela/images/favicon.png",
+    "logo": "/hela/images/logo.png",
+    "logo_darkmode": "/hela/images/logo-darkmode.png",
     "logo_width": "150",
     "logo_height": "30",
     "logo_text": "Astroplate"

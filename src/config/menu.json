@@ -2,19 +2,19 @@
   "main": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "/hela"
     },
     {
       "name": "About",
-      "url": "/about"
+      "url": "/hela/about"
     },
     {
       "name": "Elements",
-      "url": "/elements"
+      "url": "/hela/elements"
     },
     {
       "name": "Pages",
-      "url": "",
+      "url": "/hela",
       "hasChildren": true,
       "children": [
         {
@@ -31,11 +31,11 @@
   "footer": [
     {
       "name": "Elements",
-      "url": "/elements"
+      "url": "/hela/elements"
     },
     {
       "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "url": "/hela/privacy-policy"
     }
   ]
 }
