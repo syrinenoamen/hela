@@ -2,7 +2,7 @@
 # Banner
 banner:
   title: "Dr Hela Noomene"
-  content: "Médecin pédiatre FMH "
+  content: "Pédiatre FMH, Membre FMH et SSP"
   image: "/images/banner.png"
   button:
     enable: true

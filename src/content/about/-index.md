@@ -1,24 +1,24 @@
 ---
-title: "Hey, I am Hela!"
-meta_title: "About"
+title: "Parcours"
+meta_title: "Profile"
 description: "this is meta description"
 image: "/images/avatar.png"
 draft: false
 
-specialization: "Pediatry"
+specialization: "Pédiatre"
 
 languages:
-  - name: "English"
-  - name: "French"
-  - name: "Arabic"
+  - name: "Français"
+  - name: "Anglais"
+  - name: "Arabe"
 
 certifications:
-  - name: "Diplôme de Médecine Tunisie"
-    year: 2016
-  - name: "Diplôme de Médecine Tunisie"
-    year: 2016
-  - name: "Diplôme de Médecine Tunisie"
+  - name: "Diplôme d'études supérieures, Titre postgrade de spécialiste en pédiatrie"
+    year: 2023
+  - name: "Diplôme Fédéral de Médecine, Lausanne"
+    year: 2020
+  - name: "Doctorat en Médecine, Faculté de médecine de Monastir, Tunisie"
     year: 2016
 ---
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis illum nesciunt commodi vel nisi ut alias excepturi ipsum, totam, labore tempora, odit ex iste tempore sed. Fugit voluptatibus perspiciatis assumenda nulla ad nihil, omnis vel, doloremque sit quam autem optio maiores, illum eius facilis et quo consectetur provident dolor similique! Enim voluptatem dicta expedita veritatis repellat dolorum impedit, provident quasi at.
+Passionnée de pédiatrie, je mets à profit ma riche expérience clinique, mes aptitudes en communication et mon esprit d'équipe pour prodiguer des soins de qualité.

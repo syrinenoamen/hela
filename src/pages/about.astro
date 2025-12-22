@@ -38,11 +38,10 @@ if (aboutIndex.data.draft) {
           }
           <h2 set:html={markdownify(title)} class="h3 mb-4" />
           <div class="flex flex-wrap mx-auto justify-center gap-2">
-            <h4 class="font-bold">Specialization:</h4>
             <h4 class="font-normal">{aboutIndex.data.specialization}</h4>
           </div>
           <div class="mb-6">
-            <h4 class="h4 mb-2">Languages:</h4>
+            <h4 class="h4 mb-2">LANGUES:</h4>
             <ul>
               {
                 aboutIndex.data.languages.map((language) => (
@@ -52,7 +51,7 @@ if (aboutIndex.data.draft) {
             </ul>
           </div>
           <div class="mb-6">
-            <h4 class="h4 mb-2">Certifications:</h4>
+            <h4 class="h4 mb-2">DIPLÔMES:</h4>
             <ul>
               {
                 aboutIndex.data.certifications.map((certification) => (
