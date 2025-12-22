@@ -3,65 +3,88 @@ import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import { render } from "astro:content";
 
-const aboutIndex = await getListPage("about", "-index");
-const { Content } = await render(aboutIndex);
-const { title, description, meta_title, image } = aboutIndex.data;
-
-if (aboutIndex.data.draft) {
-  return Astro.redirect("/404");
-}
+const aboutData = await getListPage("about", "-index");
+const { title, image, specialization, languages, certifications } = aboutData.data;
+const aboutContent = aboutData.body;
 ---
 
-<Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={image}
->
-  <section class="section-sm">
+<Base title={title}>
+  <!-- About Section -->
+  <section class="section pt-14">
     <div class="container">
       <div class="row justify-center">
-        <div class="text-center md:col-10 lg:col-7">
-          {
-            image && (
-              <ImageMod
-                class="mx-auto mb-6 rounded-lg"
-                src={image}
-                width={200}
-                height={200}
-                alt={title}
-                format="webp"
-              />
-            )
-          }
-          <h2 set:html={markdownify(title)} class="h3 mb-4" />
-          <div class="flex flex-wrap mx-auto justify-center gap-2">
-            <h4 class="font-normal">{aboutIndex.data.specialization}</h4>
+        <div class="lg:col-10">
+          <!-- Profile Header -->
+          <div class="row items-center mb-12">
+            <div class="md:col-4 mb-6 md:mb-0">
+              <div class="text-center">
+                {image && (
+                  <ImageMod
+                    src={image}
+                    height={300}
+                    width={300}
+                    alt={title}
+                    format="webp"
+                    class="rounded-full mx-auto shadow-lg"
+                  />
+                )}
+              </div>
+            </div>
+            <div class="md:col-8">
+              <h1 class="mb-4 text-h2 lg:text-h1">{title}</h1>
+              <div class="bg-primary/10 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-semibold text-primary mb-2">Spécialisation</h3>
+                <p class="text-lg">{specialization}</p>
+              </div>
+              <div class="prose lg:prose-lg">
+                <p set:html={markdownify(aboutContent)} />
+              </div>
+            </div>
           </div>
-          <div class="mb-6">
-            <h4 class="h4 mb-2">LANGUES:</h4>
-            <ul>
-              {
-                aboutIndex.data.languages.map((language) => (
-                  <li>{language.name}</li>
-                ))
-              }
-            </ul>
+
+          <!-- Languages Section -->
+          <div class="row mb-12">
+            <div class="col-12">
+              <div class="bg-white rounded-lg shadow-sm border p-8">
+                <h2 class="text-h3 mb-6 text-center">Langues parlées</h2>
+                <div class="row justify-center">
+                  {languages.map((language: any) => (
+                    <div class="sm:col-4 mb-4">
+                      <div class="bg-theme-light/50 rounded-lg p-6 text-center border">
+                        <h4 class="font-semibold text-lg text-dark">{language.name}</h4>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="mb-6">
-            <h4 class="h4 mb-2">DIPLÔMES:</h4>
-            <ul>
-              {
-                aboutIndex.data.certifications.map((certification) => (
-                  <li>{`${certification.name} (${certification.year})`} </li>
-                ))
-              }
-            </ul>
-          </div>
-          <div class="content">
-            <Content />
+
+          <!-- Certifications Section -->
+          <div class="row">
+            <div class="col-12">
+              <div class="bg-white rounded-lg shadow-sm border p-8">
+                <h2 class="text-h3 mb-8 text-center">Formation et Certifications</h2>
+                <div class="space-y-6">
+                  {certifications.map((cert: any, index: number) => (
+                    <div class="p-6 bg-theme-light/30 rounded-lg border-l-4 border-primary">
+                      <div class="flex items-center justify-between">
+                        <div class="flex-1">
+                          <h3 class="text-lg font-semibold mb-2">{cert.name}</h3>
+                          <p class="text-text/70">Obtenu en {cert.year}</p>
+                        </div>
+                        <div class="ml-4">
+                          <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary text-white">
+                            {cert.year}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
