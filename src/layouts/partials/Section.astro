@@ -1,0 +1,12 @@
+---
+type Props = {
+  background?: string;
+  class?: string;
+};
+
+const { background, class: className, ...rest } = Astro.props;
+---
+
+<div class:list={[className, "row"]} {...rest}>
+  <div class="container"><slot /></div>
+</div>
