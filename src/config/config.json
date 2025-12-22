@@ -2,7 +2,7 @@
   "site": {
     "title": "Astroplate",
     "base_url": "https://syrinenoamen.github.io/hela",
-    "base_path": "/",
+    "base_path": "/hela",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
