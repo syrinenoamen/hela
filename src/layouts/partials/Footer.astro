@@ -4,20 +4,17 @@ import SmallCard from "./SmallCard.astro";
 import Section from "./Section.astro";
 ---
 
-<Section class="bg-light dark:bg-darkmode-light py-14">
+<Section class="bg-secondary-body py-14">
   <div class="flex flex-row flex-wrap gap-6">
     <div class="grow">
-      <SmallCard heading="Email" text="dr.hela.noomene@example.com" />
+      <SmallCard
+        heading="Email"
+        text="dr.hela.noomene@example.com"
+        class="bg-secondary"
+      />
     </div>
     <div class="grow">
-      <SmallCard heading="Phone" text="+41 12 345 67 89" class="" />
+      <SmallCard heading="Phone" text="+41 12 345 67 89" class="bg-secondary" />
     </div>
   </div>
 </Section>
-
-<!-- Simple Footer -->
-<div class="border-t border-border/20 py-6">
-  <div class="text-center">
-    <Logo />
-  </div>
-</div>
