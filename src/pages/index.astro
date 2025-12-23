@@ -46,13 +46,14 @@ const { banner, features } = homepage.data;
         </div>
         {
           banner.image && (
-            <div class="col-12">
+            <div class="col-7">
               <ImageMod
                 src={banner.image}
                 height={380}
                 width={1200}
                 alt="banner"
                 format="webp"
+                class="w-full"
               />
             </div>
           )
