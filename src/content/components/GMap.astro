@@ -1,0 +1,42 @@
+---
+import MapRenens from "./MapRenens.astro";
+import MapVevey from "./MapVevey.astro";
+import Button from "@/shortcodes/Button";
+
+type Props = {
+  map: "vevey" | "renens";
+  class?: string;
+};
+
+const { map, class: className } = Astro.props;
+
+const name =
+  map === "vevey"
+    ? "Centre médical de la gare de Vevey"
+    : "Centre médical Gare de Renens";
+
+const link =
+  map === "vevey"
+    ? "https://www.google.ch/maps/place/Medical+Center+Gare+De+Vevey/@46.4630556,6.8405797,17z/data=!3m1!4b1!4m6!3m5!1s0x478e9d258de1c973:0xda6b9523ded13807!8m2!3d46.4630519!4d6.8431546!16s%2Fg%2F11frtpflww"
+    : "https://www.google.ch/maps/place/Centre+medical+Gare+de+Renens/@46.5377156,6.5772597,17z/data=!3m1!4b1!4m6!3m5!1s0x478c31840a35b349:0xa10a08cca63298f2!8m2!3d46.5377156!4d6.5772597!16s%2Fg%2F11y89cly33?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D";
+---
+
+<div class="md:col-6 mb-6">
+  <div
+    class:list={[
+      "bg-white rounded-md overflow-hidden h-full flex flex-col",
+      className,
+    ]}
+  >
+    <div class="h-48 w-full">
+      {map === "vevey" ? <MapVevey /> : <MapRenens />}
+    </div>
+    <div class="px-6 pb-6 text-center flex flex-col grow">
+      <h3 class="text-xl font-semibold mb-2">{name}</h3>
+      <p class="text-text opacity-75 mb-3">Consultations pédiatriques</p>
+      <div class="mt-auto">
+        <Button label="Voir sur Google Maps" link={link} style="outline" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,27 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
 import { markdownify } from "@/lib/utils/textConverter";
+
+type Props = {
+  call_to_action: {
+    data:
+      | {
+          enable: true;
+          image: string;
+          title: string;
+          description: string;
+          button:
+            | {
+                enable: true;
+                link: string;
+                label: string;
+              }
+            | { enable: false };
+        }
+      | { enable: false };
+  };
+};
+
 const { call_to_action } = Astro.props;
 ---
 

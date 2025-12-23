@@ -8,7 +8,7 @@ const Button = ({
 }: {
   label: string;
   link: string;
-  style?: string;
+  style?: "outline" | "primary";
   rel?: string;
 }) => {
   return (

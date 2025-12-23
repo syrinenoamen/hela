@@ -8,7 +8,7 @@
   /* === Colors === */
   --color-primary: #FF5C85;
   --color-body: #FFEBF0;
-  --color-border: #eaeaea;
+  --color-border: #708BC1;
   --color-light: #FFD6E0;
   --color-dark: #040404;
   --color-secondary: #708BC1;
@@ -16,11 +16,12 @@
   --color-text: #101319;
   --color-text-dark: #040404;
   --color-text-light: #FEF9FA;
+  --color-text-secondary: #314772;
 
   /* === Darkmode Colors === */
   --color-darkmode-primary: #fff;
-  --color-darkmode-body: #1c1c1c;
-  --color-darkmode-border: #3E3E3E;
+  --color-darkmode-body: #F00;
+  --color-darkmode-border: #F00;
   --color-darkmode-light: #222222;
   --color-darkmode-dark: #fff;
   --color-darkmode-text: #B4AFB6;
